@@ -11,7 +11,13 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary : "#4831d4",
+        secondary : "#ccf381"
       },
+      fontFamily : {
+        iranSans : ["var(--font-iran-sans)"],
+        teko : ["var(--font-teko)"]
+      }
     },
   },
   plugins: [],

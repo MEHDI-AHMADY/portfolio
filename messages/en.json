@@ -1,0 +1,10 @@
+{
+    "Header" : {
+        "Mehdi" : "Mehdi"
+    },
+    "HomePage" : {
+        "jobTitle1" : "Frontend",
+        "jobTitle2" : "Developer",
+        "description" : "I love to turn Ideas into reality"
+    }
+}
