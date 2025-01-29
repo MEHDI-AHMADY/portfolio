@@ -27,11 +27,15 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${iranSans.variable} ${teko.variable}`}>
+    <html
+      dir={locale === "en" ? "ltr" : "rtl"}
+      lang={locale}
+      className={`${iranSans.variable} ${teko.variable}`}
+    >
       <body
         className={`${
-          locale === "en" ? "font-teko" : "font-iranSans"
-        } text-2xl antialiased`}
+          locale === "en" ? "font-teko text-2xl" : "font-iranSans"
+        } antialiased overflow-hidden`}
       >
         <NextIntlClientProvider messages={messages}>
           {children}

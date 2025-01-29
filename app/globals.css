@@ -2,8 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 @layer components {
-  .hero-section {
-    background: linear-gradient(90deg, #4831d4 67%, #ccf381 33%);
+  .shared-bg {
+    background: linear-gradient(90deg, #4831d4 64%, #ccf381 36%);
+  }
+
+  .nav-item {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .nav-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transform: translateX(-101%);
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-item:hover::after {
+    animation: underline-loop 1s linear infinite;
+  }
+  
+  @keyframes underline-loop {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+
+  .imageParent::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid;
   }
 }

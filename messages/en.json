@@ -1,10 +1,19 @@
 {
-    "Header" : {
-        "Mehdi" : "Mehdi"
-    },
-    "HomePage" : {
-        "jobTitle1" : "Frontend",
-        "jobTitle2" : "Developer",
-        "description" : "I love to turn Ideas into reality"
-    }
+  "Header": {
+    "Mehdi": "M",
+    "about": "About",
+    "resume": "Resume",
+    "projects": "Projects",
+    "github": "Github"
+  },
+  "Language" : {
+    "en" : "en",
+    "fa" : "fa"
+  },
+  "HomePage": {
+    "jobTitle1": "Frontend",
+    "jobTitle2": "Developer",
+    "description": "I love to turn Ideas into reality",
+    "description2": "I thrive on solving complex problems and turning ideas into responsive, accessible, and visually appealing websites"
+  }
 }
