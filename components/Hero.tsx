@@ -1,29 +1,23 @@
+"use client";
+
 import { useLocale, useTranslations } from "next-intl";
 import { ImMagicWand } from "react-icons/im";
 import Header from "./Header";
 import Image from "next/image";
 import MyImage from "@/assets/images/me.jpg";
-import SectionNavigate from "./SectionNavigate";
-import { SectionProps } from "@/app/types/shared";
+import { useSections } from "@/context/SectionRefsContext";
 
-export interface HeroProps extends SectionProps {
-  sections: {
-    about: React.RefObject<HTMLElement | null>;
-  };
-}
-
-const Hero: React.FC<HeroProps> = ({ sectionRef, sections }) => {
+const Hero = () => {
   const t = useTranslations("HomePage");
   const locale = useLocale();
+  const { heroRef, sections } = useSections();
 
   const style = locale === "en" ? "text-white" : "text-primary";
 
   return (
-    <section
-      ref={sectionRef}
-      className="shared-bg p-4 text-white lg:min-h-screen"
-    >
-      <Header sections={sections}/>
+    <section ref={heroRef} className="shared-bg p-4 text-white lg:min-h-screen">
+      <Header />
+
       <div className="flex items-center justify-between mt-32 px-5">
         <div className={`${style}`}>
           <h1 className="text-5xl text-secondary">
@@ -55,8 +49,6 @@ const Hero: React.FC<HeroProps> = ({ sectionRef, sections }) => {
           <Image src={MyImage} fill={true} alt="myImage" loading="lazy" />
         </div>
       </div>
-
-      <SectionNavigate />
     </section>
   );
 };

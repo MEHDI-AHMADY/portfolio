@@ -1,22 +1,61 @@
-import Link from "next/link";
-import { MdOutlineCircle } from "react-icons/md";
+"use client";
 
-const links = [
-  { href: "#about" },
-  { href: "#resume" },
-  { href: "#projects" },
-  { href: "#contact" },
-];
+import { useSections } from "@/context/SectionRefsContext";
+import { useLocale } from "next-intl";
+import { useEffect, useState } from "react";
+import { PiBaseballFill } from "react-icons/pi";
+import { PiBaseballDuotone } from "react-icons/pi";
 
 const SectionNavigate = () => {
+  const [currentSectionIndex, setCurrentSectionIndex] = useState<number | null>(
+    null
+  );
+  const { sections } = useSections();
+  const locale = useLocale();
+
+  const activeStyle = locale === "en" ? "bg-primary" : "bg-secondary";
+  const nonActiveStyle = locale === "en" ? "bg-white" : "bg";
+
+  const scrollToSection = (sectionRef: React.RefObject<HTMLElement | null>) => {
+    sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    const updateCurrentSection = () => {
+      const visibleSectionIndex = sections.findIndex((ref) => {
+        const rect = ref.current?.getBoundingClientRect();
+        return rect && rect.top >= 0 && rect.bottom <= window.innerHeight;
+      });
+
+      if (visibleSectionIndex !== -1) {
+        setCurrentSectionIndex(visibleSectionIndex);
+      }
+    };
+
+    updateCurrentSection();
+
+    const handleScroll = () => {
+      updateCurrentSection();
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav dir="rtl">
+    <nav className="fixed bottom-20 end-10">
       <ul>
-        {links.map((link, index) => (
+        {sections.map((section, index) => (
           <li key={index}>
-            <Link href={link.href}>
-              <MdOutlineCircle />
-            </Link>
+            <button onClick={() => scrollToSection(section)}>
+              {currentSectionIndex === index ? (
+                <PiBaseballFill className="w-5 h-5" />
+              ) : (
+                <PiBaseballDuotone className="w-5 h-5" />
+              )}
+            </button>
           </li>
         ))}
       </ul>

@@ -1,9 +1,12 @@
-import { SectionProps } from '@/app/types/shared';
+"use client" ;
+
+import { useSections } from '@/context/SectionRefsContext';
 import React from 'react';
 
-const About:React.FC<SectionProps> = ({sectionRef}) => {
+const About = () => {
+   const {aboutRef} = useSections()
   return (
-    <section ref={sectionRef} className="h-screen bg-red-300">About</section>
+    <section ref={aboutRef} className="h-screen bg-red-300">About</section>
   )
 }
 

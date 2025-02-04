@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "../../i18n/routing";
+import { SectionContextProvider } from "@/context/SectionRefsContext";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -38,7 +39,7 @@ export default async function RootLayout({
         } antialiased overflow-hidden`}
       >
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <SectionContextProvider>{children}</SectionContextProvider>
         </NextIntlClientProvider>
       </body>
     </html>
