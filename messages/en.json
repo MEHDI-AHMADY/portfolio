@@ -15,5 +15,9 @@
     "jobTitle2": "Developer",
     "description": "I love to turn Ideas into reality",
     "description2": "I thrive on solving complex problems and turning ideas into responsive, accessible, and visually appealing websites"
+  },
+  "AboutSection" : {
+    "AboutMe" : "About Me",
+    "description" : "Hi, I'm Mehdi Ahmadi, a 24-year-old frontend developer with a lifelong passion for technology. My journey started as a kid, tinkering with my older brother's computer whenever I had the chance. Two years ago, I decided to pursue frontend development professionally, attending an institute while primarily being self-taught. I also gained a year of hands-on experience working as a frontend developer in a company. Now, I'm eager to join a professional team where I can continue learning and growing."
   }
 }

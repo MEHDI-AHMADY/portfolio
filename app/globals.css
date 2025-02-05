@@ -53,4 +53,8 @@
     height: 100%;
     border: 1px solid;
   }
+
+  .text-shadow {
+    text-shadow: #14d05f 1px 0 10px;
+  }
 }

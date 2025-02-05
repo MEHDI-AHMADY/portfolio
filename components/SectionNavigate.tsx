@@ -1,7 +1,6 @@
 "use client";
 
 import { useSections } from "@/context/SectionRefsContext";
-import { useLocale } from "next-intl";
 import { useEffect, useState } from "react";
 import { PiBaseballFill } from "react-icons/pi";
 import { PiBaseballDuotone } from "react-icons/pi";
@@ -11,10 +10,6 @@ const SectionNavigate = () => {
     null
   );
   const { sections } = useSections();
-  const locale = useLocale();
-
-  const activeStyle = locale === "en" ? "bg-primary" : "bg-secondary";
-  const nonActiveStyle = locale === "en" ? "bg-white" : "bg";
 
   const scrollToSection = (sectionRef: React.RefObject<HTMLElement | null>) => {
     sectionRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -49,7 +44,7 @@ const SectionNavigate = () => {
       <ul>
         {sections.map((section, index) => (
           <li key={index}>
-            <button onClick={() => scrollToSection(section)}>
+            <button onClick={() => scrollToSection(section)} className="outline-none hover:scale-110">
               {currentSectionIndex === index ? (
                 <PiBaseballFill className="w-5 h-5" />
               ) : (

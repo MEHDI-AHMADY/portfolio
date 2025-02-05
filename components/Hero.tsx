@@ -10,7 +10,7 @@ import { useSections } from "@/context/SectionRefsContext";
 const Hero = () => {
   const t = useTranslations("HomePage");
   const locale = useLocale();
-  const { heroRef, sections } = useSections();
+  const { heroRef } = useSections();
 
   const style = locale === "en" ? "text-white" : "text-primary";
 
