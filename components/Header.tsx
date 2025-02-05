@@ -30,7 +30,12 @@ const Header = () => {
             </button>
           </li>
           <li className="nav-item">
-            <button onClick={() => scrollToSection(sections[2])}>{t("projects")}</button>
+            <button
+              className="outline-none"
+              onClick={() => scrollToSection(sections[2])}
+            >
+              {t("projects")}
+            </button>
           </li>
           <li className="nav-item">
             <Link href="#github">{t("github")}</Link>

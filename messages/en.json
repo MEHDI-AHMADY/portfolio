@@ -6,9 +6,9 @@
     "projects": "Projects",
     "github": "Github"
   },
-  "Language" : {
-    "en" : "en",
-    "fa" : "fa"
+  "Language": {
+    "en": "en",
+    "fa": "fa"
   },
   "HomePage": {
     "jobTitle1": "Frontend",
@@ -16,8 +16,92 @@
     "description": "I love to turn Ideas into reality",
     "description2": "I thrive on solving complex problems and turning ideas into responsive, accessible, and visually appealing websites"
   },
-  "AboutSection" : {
-    "AboutMe" : "About Me",
-    "description" : "Hi, I'm Mehdi Ahmadi, a 24-year-old frontend developer with a lifelong passion for technology. My journey started as a kid, tinkering with my older brother's computer whenever I had the chance. Two years ago, I decided to pursue frontend development professionally, attending an institute while primarily being self-taught. I also gained a year of hands-on experience working as a frontend developer in a company. Now, I'm eager to join a professional team where I can continue learning and growing."
+  "AboutSection": {
+    "AboutMe": "About Me",
+    "description": "Hi, I'm Mehdi Ahmadi, a 24-year-old frontend developer with a lifelong passion for technology. My journey started as a kid, tinkering with my older brother's computer whenever I had the chance. Two years ago, I decided to pursue frontend development professionally, attending an institute while primarily being self-taught. I also gained a year of hands-on experience working as a frontend developer in a company. Now, I'm eager to join a professional team where I can continue learning and growing."
+  },
+  "ProjectsSection" : {
+    "Projects" : "Projects",
+    "Tools" : "Tools",
+    "GithubAddress" : "GithubAddress",
+    "Dashboard" : {
+      "title" : "Dashboard",
+      "description" : "A nice Dashboard built with react",
+      "tech": {
+        "0": "React",
+        "1": "Tailwind CSS",
+        "2": "MUI",
+        "3": "Recharts"
+      },
+      "github" : "https://github.com/MEHDI-AHMADY/Dashboard",
+      "image" : "/assets/images/dashboard.png"
+    },
+    "LandingPage" : {
+      "title" : "LandingPage",
+      "description" : "First Project with Next.js",
+      "tech": {
+        "0": "Next.js",
+        "1": "Tailwind CSS",
+        "2": "Framer-motion",
+        "3": "Swiper"
+      },
+      "github" : "https://github.com/MEHDI-AHMADY/landingPage",
+      "image" : "/assets/images/landing.png"
+    },
+    "IMdbClone" : {
+      "title" : "IMdbClone",
+      "description" : "IMdbClone",
+      "tech": {
+        "0": "Next.js",
+        "1": "Tailwind CSS",
+        "2": "Framer-motion"
+      },
+      "github" : "https://github.com/MEHDI-AHMADY/IMdb-clone",
+      "image" : "/assets/images/imdbclone.png"
+    },
+    "NumberPuzzle" : {
+      "title" : "NumberPuzzle",
+      "description" : "A fun NumberPuzzle with react",
+      "tech": {
+        "0": "React",
+        "1": "Tailwind CSS"
+      },
+      "github" : "https://github.com/MEHDI-AHMADY/numberPuzzle",
+      "image" : "/assets/images/numberPuzzle.png"
+    },
+    "PersianDashboard" : {
+      "title" : "PersianDashboard",
+      "description" : "A Persian Dashboard with React",
+      "tech": {
+        "0": "React",
+        "1": "Tailwind CSS",
+        "2" : "Framer-motion",
+        "3" : "Axios",
+        "4" : "ReactQuery",
+        "5" : "Ts",
+        "6" : "ReactHookForm",
+        "7" : "Yup",
+        "8" : "Shadcn"
+      },
+      "github" : "https://github.com/MEHDI-AHMADY/persian-dashboard",
+      "image" : "/assets/images/pDashboard.png"
+    },
+    "Ticketing" : {
+      "title" : "Ticketing",
+      "description" : "A Ticketing App with Next.js",
+      "tech": {
+        "0": "Next.js",
+        "1": "Tailwind CSS",
+        "2" : "Prisma",
+        "3" : "Axios",
+        "4" : "zod",
+        "5" : "Ts",
+        "6" : "ReactHookForm",
+        "7" : "NextAuth",
+        "8" : "Shadcn"
+      },
+      "github" : "https://github.com/MEHDI-AHMADY/ticketing",
+      "image" : "/assets/images/ticketing.png"
+    }
   }
 }

@@ -4,7 +4,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { ImMagicWand } from "react-icons/im";
 import Header from "./Header";
 import Image from "next/image";
-import MyImage from "@/assets/images/me.jpg";
+import MyImage from "@/public/assets/images/me.jpg";
 import { useSections } from "@/context/SectionRefsContext";
 
 const Hero = () => {

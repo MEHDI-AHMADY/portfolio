@@ -4,11 +4,11 @@ import { Teko } from "next/font/google";
 const iranSans = localFont({
   src: [
     {
-      path: "../../assets/fonts/IRANSansXFaNum-Bold.ttf",
+      path: "../../public/assets/fonts/IRANSansXFaNum-Bold.ttf",
       weight: "700",
       style: "normal",
     },
-    { path: "../../assets/fonts/IRANSansXFaNum-Regular.ttf", weight: "400" },
+    { path: "../../public/assets/fonts/IRANSansXFaNum-Regular.ttf", weight: "400" },
   ],
   variable: "--font-iran-sans",
   display: "swap",

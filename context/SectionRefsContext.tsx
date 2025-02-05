@@ -1,10 +1,17 @@
 "use client";
 
-import { createContext, PropsWithChildren, useContext, useEffect, useRef } from "react";
+import {
+  createContext,
+  PropsWithChildren,
+  useContext,
+  useEffect,
+  useRef,
+} from "react";
 
 type SectionRefs = {
   aboutRef: React.RefObject<HTMLElement | null>;
   heroRef: React.RefObject<HTMLElement | null>;
+  projectsRef: React.RefObject<HTMLElement | null>;
   sections: React.RefObject<HTMLElement | null>[];
 };
 
@@ -15,8 +22,9 @@ export const SectionContextProvider: React.FC<PropsWithChildren> = ({
 }) => {
   const heroRef = useRef<HTMLElement | null>(null);
   const aboutRef = useRef<HTMLElement | null>(null);
+  const projectsRef = useRef<HTMLElement | null>(null);
 
-  const sections = [heroRef, aboutRef];
+  const sections = [heroRef, aboutRef, projectsRef];
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -29,7 +37,7 @@ export const SectionContextProvider: React.FC<PropsWithChildren> = ({
         event.key === "ArrowDown" &&
         currentSectionIndex < sections.length - 1
       ) {
-       sections[currentSectionIndex + 1].current?.scrollIntoView({
+        sections[currentSectionIndex + 1].current?.scrollIntoView({
           behavior: "smooth",
         });
       } else if (event.key === "ArrowUp" && currentSectionIndex > 0) {
@@ -44,16 +52,18 @@ export const SectionContextProvider: React.FC<PropsWithChildren> = ({
   }, []);
 
   return (
-    <SectionsContext.Provider value={{heroRef , aboutRef , sections}}>
-        {children}
+    <SectionsContext.Provider
+      value={{ heroRef, aboutRef, projectsRef, sections }}
+    >
+      {children}
     </SectionsContext.Provider>
-  )
+  );
 };
 
 export const useSections = () => {
-    const context = useContext(SectionsContext);
-    if (!context) {
-      throw new Error("useSections must be used within a SectionContextProvider");
-    }
-    return context;
-  };
+  const context = useContext(SectionsContext);
+  if (!context) {
+    throw new Error("useSections must be used within a SectionContextProvider");
+  }
+  return context;
+};

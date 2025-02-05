@@ -3,7 +3,7 @@
 import { useSections } from "@/context/SectionRefsContext";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import AboutImage from '@/assets/images/About.jpg';
+import AboutImage from '@/public/assets/images/about.jpg';
 
 const About = () => {
   const { aboutRef } = useSections();
@@ -17,7 +17,7 @@ const About = () => {
           {t("description")}
         </div>
 
-        <div className="relative w-full lg:min-h-[400px]">
+        <div className="relative w-full lg:min-h-[500px]">
           <Image src={AboutImage} fill alt="aboutImage"/>
         </div>
       </div>

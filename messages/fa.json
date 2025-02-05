@@ -19,5 +19,89 @@
   "AboutSection" : {
     "AboutMe" : "درباره من",
     "description" : "سلام! من مهدی احمدی هستم، یک توسعه‌دهنده فرانت‌اند ۲۴ ساله با علاقه‌ای قدیمی به دنیای تکنولوژی. از بچگی به کامپیوتر علاقه داشتم و همیشه با سیستم برادرم، وقتی در دسترسم بود، سر و کله می‌زدم! دو سال پیش تصمیم گرفتم به‌صورت حرفه‌ای وارد دنیای فرانت‌اند شوم. در یک مؤسسه آموزش دیدم، اما بیشتر مهارتم را به‌صورت خودآموز یاد گرفتم. همچنین یک سال به‌عنوان توسعه‌دهنده فرانت‌اند در یک شرکت کار کردم. حالا مشتاقم که با یک تیم حرفه‌ای کار کنم، یاد بگیرم و رشد کنم."
+  },
+  "ProjectsSection" : {
+    "Projects" : "پروژه ها",
+    "Tools" : "ابزارها",
+    "GithubAddress" : "آدرس گیت هاب",
+    "Dashboard" : {
+      "title" : "داشبورد",
+      "description" : "داشبورد با ری اکت",
+      "tech": {
+        "0": "React",
+        "1": "Tailwind CSS",
+        "2": "MUI",
+        "3": "Recharts"
+      },
+      "github" : "https://github.com/MEHDI-AHMADY/Dashboard",
+      "image" : "/assets/images/dashboard.png"
+    },
+    "LandingPage" : {
+      "title" : "لندینگ",
+      "description" : "اولین پروژه با نکست جی اس",
+      "tech": {
+        "0": "Next.js",
+        "1": "Tailwind CSS",
+        "2": "Framer-motion",
+        "3": "Swiper"
+      },
+      "github" : "https://github.com/MEHDI-AHMADY/landingPage",
+      "image" : "/assets/images/landing.png"
+    },
+    "IMdbClone" : {
+      "title" : "IMdbClone",
+      "description" : "IMdbClone",
+      "tech": {
+        "0": "Next.js",
+        "1": "Tailwind CSS",
+        "2": "Framer-motion"
+      },
+      "github" : "https://github.com/MEHDI-AHMADY/IMdb-clone",
+      "image" : "/assets/images/imdbclone.png"
+    },
+    "NumberPuzzle" : {
+      "title" : "پازل اعداد",
+      "description" : "پازل اعداد",
+      "tech": {
+        "0": "React",
+        "1": "Tailwind CSS"
+      },
+      "github" : "https://github.com/MEHDI-AHMADY/numberPuzzle",
+      "image" : "/assets/images/numberPuzzle.png"
+    },
+    "PersianDashboard" : {
+      "title" : "داشبورد فارسی",
+      "description" : "داشبورد فارسی",
+      "tech": {
+        "0": "React",
+        "1": "Tailwind CSS",
+        "2" : "Framer-motion",
+        "3" : "Axios",
+        "4" : "ReactQuery",
+        "5" : "Ts",
+        "6" : "ReactHookForm",
+        "7" : "Yup",
+        "8" : "Shadcn"
+      },
+      "github" : "https://github.com/MEHDI-AHMADY/persian-dashboard",
+      "image" : "/assets/images/pDashboard.png"
+    },
+    "Ticketing" : {
+      "title" : "Ticketing",
+      "description" : "اپ رزرو تیکت",
+      "tech": {
+        "0": "Next.js",
+        "1": "Tailwind CSS",
+        "2" : "Prisma",
+        "3" : "Axios",
+        "4" : "zod",
+        "5" : "Ts",
+        "6" : "ReactHookForm",
+        "7" : "NextAuth",
+        "8" : "Shadcn"
+      },
+      "github" : "https://github.com/MEHDI-AHMADY/ticketing",
+      "image" : "/assets/images/ticketing.png"
+    }
   }
 }
