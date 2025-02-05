@@ -3,11 +3,11 @@ import { createNavigation } from "next-intl/navigation";
 
 interface RoutingObj {
   locales: string[];
-  defaultLocale: "string";
+  defaultLocale: string;
 }
 
 export const routing: RoutingObj = defineRouting({
-  locales: ["en", "fa"],
+  locales: ["en", "fa"] as const,
   defaultLocale: "en",
 });
 

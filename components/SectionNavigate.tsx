@@ -37,7 +37,7 @@ const SectionNavigate = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [sections]);
 
   return (
     <nav className="fixed bottom-20 end-10">
