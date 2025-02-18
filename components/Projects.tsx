@@ -10,14 +10,13 @@ import {
   SiFramer,
   SiAxios,
   SiReactquery,
-  SiTypescript,
   SiReacthookform,
   SiShadcnui,
   SiMui,
   SiReactrouter,
   SiNextdotjs,
   SiPrisma,
-  SiZod
+  SiZod,
 } from "react-icons/si";
 interface Project {
   id: number;
@@ -37,7 +36,12 @@ const Projects = () => {
       id: 1,
       title: t("Dashboard.title"),
       description: t("Dashboard.description"),
-      tech: [<SiReact />, <SiMui />, <SiTailwindcss />, <SiReactrouter />],
+      tech: [
+        <SiReact key={"react"} />,
+        <SiMui key={"mui"} />,
+        <SiTailwindcss key={"tailwind"} />,
+        <SiReactrouter key={"reactRouterDom"} />,
+      ],
       github: t("Dashboard.github"),
       image: t("Dashboard.image"),
     },
@@ -45,7 +49,11 @@ const Projects = () => {
       id: 2,
       title: t("LandingPage.title"),
       description: t("LandingPage.description"),
-      tech: [<SiNextdotjs />, <SiFramer />, <SiTailwindcss />],
+      tech: [
+        <SiNextdotjs key={"nextjs"} />,
+        <SiFramer key={"framerMotion"} />,
+        <SiTailwindcss key={"tailwind"} />,
+      ],
       github: t("LandingPage.github"),
       image: t("LandingPage.image"),
     },
@@ -53,7 +61,11 @@ const Projects = () => {
       id: 3,
       title: t("IMdbClone.title"),
       description: t("IMdbClone.description"),
-      tech: [<SiNextdotjs />, <SiAxios />, <SiFramer />],
+      tech: [
+        <SiNextdotjs key={"nextjs"} />,
+        <SiAxios key={"axios"} />,
+        <SiFramer key={"framerMotion"} />,
+      ],
       github: t("IMdbClone.github"),
       image: t("IMdbClone.image"),
     },
@@ -61,7 +73,7 @@ const Projects = () => {
       id: 4,
       title: t("NumberPuzzle.title"),
       description: t("NumberPuzzle.description"),
-      tech: [<SiReact />, <SiTailwindcss />],
+      tech: [<SiReact key={"react"} />, <SiTailwindcss key={"tailwind"} />],
       github: t("NumberPuzzle.github"),
       image: t("NumberPuzzle.image"),
     },
@@ -70,13 +82,14 @@ const Projects = () => {
       title: t("PersianDashboard.title"),
       description: t("PersianDashboard.description"),
       tech: [
-        <SiReact />,
-        <SiAxios />,
-        <SiShadcnui />,
-        <SiFramer />,
-        <SiTailwindcss />,
-        <SiReacthookform />,
-        <SiReactrouter />,
+        <SiReact key={"react"} />,
+        <SiAxios key={"axios"} />,
+        <SiShadcnui key={"shadcn"} />,
+        <SiFramer key={"framerMotion"} />,
+        <SiTailwindcss key={"tailwind"} />,
+        <SiReacthookform key={"reactHookForm"} />,
+        <SiReactrouter key={"reactRouterDom"} />,
+        <SiReactquery key={"reactQuery"} />,
       ],
       github: t("PersianDashboard.github"),
       image: t("PersianDashboard.image"),
@@ -85,7 +98,13 @@ const Projects = () => {
       id: 6,
       title: t("Ticketing.title"),
       description: t("Ticketing.description"),
-      tech: [<SiNextdotjs /> , <SiPrisma /> , <SiZod /> , <SiShadcnui /> , <SiReacthookform /> ],
+      tech: [
+        <SiNextdotjs key={"nextjs"} />,
+        <SiPrisma key={"prisma"} />,
+        <SiZod key={"zod"} />,
+        <SiShadcnui key={"shadcn"} />,
+        <SiReacthookform key={"reactHookForm"} />,
+      ],
       github: t("Ticketing.github"),
       image: t("Ticketing.image"),
     },
@@ -116,7 +135,9 @@ const Projects = () => {
               <div className="flex gap-1 items-center flex-wrap">
                 <span>{t("Tools")} :</span>
                 {project.tech.map((item, index) => (
-                  <div key={index} className="px-1">{item}</div>
+                  <div key={index} className="px-1">
+                    {item}
+                  </div>
                 ))}
               </div>
 
