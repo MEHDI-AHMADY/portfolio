@@ -34,7 +34,7 @@ const ContactMe = () => {
   return (
     <section
       ref={contactMeRef}
-      className="min-h-screen bg-secondary p-4 text-slate-600"
+      className="lg:min-h-screen bg-secondary p-4 text-slate-600 mt-5 lg:my-0"
     >
       <h2 className="mb-10">{t("contactMe")}</h2>
       <h3 className="mb-10">{t("text")}</h3>

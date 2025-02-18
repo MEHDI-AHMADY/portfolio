@@ -40,7 +40,7 @@ const SectionNavigate = () => {
   }, [sections]);
 
   return (
-    <nav className="fixed bottom-20 end-10">
+    <nav className="hidden lg:block fixed bottom-20 end-10">
       <ul>
         {sections.map((section, index) => (
           <li key={index}>

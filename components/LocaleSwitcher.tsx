@@ -16,7 +16,7 @@ const LocaleSwitcher = () => {
   };
 
   return (
-    <form className="min-w-40">
+    <form className="min-w-20 sm:min-w-40">
       <select
         onChange={(e) => switchLanguage(e.target.value)}
         value={currentLocale}

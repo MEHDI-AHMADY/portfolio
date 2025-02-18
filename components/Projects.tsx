@@ -4,12 +4,26 @@ import { useSections } from "@/context/SectionRefsContext";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-
+import {
+  SiReact,
+  SiTailwindcss,
+  SiFramer,
+  SiAxios,
+  SiReactquery,
+  SiTypescript,
+  SiReacthookform,
+  SiShadcnui,
+  SiMui,
+  SiReactrouter,
+  SiNextdotjs,
+  SiPrisma,
+  SiZod
+} from "react-icons/si";
 interface Project {
   id: number;
   title: string;
   description: string;
-  tech: string[];
+  tech: React.ReactNode[];
   github: string;
   image: string;
 }
@@ -18,18 +32,12 @@ const Projects = () => {
   const { projectsRef } = useSections();
   const t = useTranslations("ProjectsSection");
 
-  const dashboardTechArray = Object.values(t.raw("Dashboard.tech")) as string[];
-  const landingTechArray = Object.values(t.raw("LandingPage.tech")) as string[];
-  const imdbCloneTechArray = Object.values(t.raw("IMdbClone.tech")) as string[];
-  const numberPuzzleTechArray = Object.values(t.raw("NumberPuzzle.tech")) as string[];
-  const persianDashboardTechArray = Object.values(t.raw("PersianDashboard.tech")) as string[];
-
   const projects: Project[] = [
     {
       id: 1,
       title: t("Dashboard.title"),
       description: t("Dashboard.description"),
-      tech: dashboardTechArray,
+      tech: [<SiReact />, <SiMui />, <SiTailwindcss />, <SiReactrouter />],
       github: t("Dashboard.github"),
       image: t("Dashboard.image"),
     },
@@ -37,7 +45,7 @@ const Projects = () => {
       id: 2,
       title: t("LandingPage.title"),
       description: t("LandingPage.description"),
-      tech: landingTechArray,
+      tech: [<SiNextdotjs />, <SiFramer />, <SiTailwindcss />],
       github: t("LandingPage.github"),
       image: t("LandingPage.image"),
     },
@@ -45,7 +53,7 @@ const Projects = () => {
       id: 3,
       title: t("IMdbClone.title"),
       description: t("IMdbClone.description"),
-      tech: imdbCloneTechArray,
+      tech: [<SiNextdotjs />, <SiAxios />, <SiFramer />],
       github: t("IMdbClone.github"),
       image: t("IMdbClone.image"),
     },
@@ -53,7 +61,7 @@ const Projects = () => {
       id: 4,
       title: t("NumberPuzzle.title"),
       description: t("NumberPuzzle.description"),
-      tech: numberPuzzleTechArray,
+      tech: [<SiReact />, <SiTailwindcss />],
       github: t("NumberPuzzle.github"),
       image: t("NumberPuzzle.image"),
     },
@@ -61,7 +69,15 @@ const Projects = () => {
       id: 5,
       title: t("PersianDashboard.title"),
       description: t("PersianDashboard.description"),
-      tech: persianDashboardTechArray,
+      tech: [
+        <SiReact />,
+        <SiAxios />,
+        <SiShadcnui />,
+        <SiFramer />,
+        <SiTailwindcss />,
+        <SiReacthookform />,
+        <SiReactrouter />,
+      ],
       github: t("PersianDashboard.github"),
       image: t("PersianDashboard.image"),
     },
@@ -69,18 +85,18 @@ const Projects = () => {
       id: 6,
       title: t("Ticketing.title"),
       description: t("Ticketing.description"),
-      tech: persianDashboardTechArray,
+      tech: [<SiNextdotjs /> , <SiPrisma /> , <SiZod /> , <SiShadcnui /> , <SiReacthookform /> ],
       github: t("Ticketing.github"),
       image: t("Ticketing.image"),
     },
   ];
 
   return (
-    <section ref={projectsRef} className="h-screen py-5 px-20">
-      <h2 className="text-xl my-4 inline-block p-1 rounded-sm">
+    <section ref={projectsRef} className="lg:min-h-screen px-4 lg:px-20">
+      <h2 className="text-2xl mb-4 inline-block p-1 rounded-sm">
         {t("Projects")}
       </h2>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {projects.map((project) => (
           <div
             key={project.id}
@@ -100,11 +116,16 @@ const Projects = () => {
               <div className="flex gap-1 items-center flex-wrap">
                 <span>{t("Tools")} :</span>
                 {project.tech.map((item, index) => (
-                  <div key={index}>{item},</div>
+                  <div key={index} className="px-1">{item}</div>
                 ))}
               </div>
 
-                <Link href={project.github} className="bg-primary/10 px-1 rounded-md">{t("GithubAddress")}</Link>
+              <Link
+                href={project.github}
+                className="bg-primary/10 px-1 rounded-md"
+              >
+                {t("GithubAddress")}
+              </Link>
             </div>
           </div>
         ))}

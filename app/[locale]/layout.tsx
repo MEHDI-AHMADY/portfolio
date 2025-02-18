@@ -36,7 +36,7 @@ export default async function RootLayout({
       <body
         className={`${
           locale === "en" ? "font-teko text-2xl" : "font-iranSans"
-        } antialiased overflow-hidden`}
+        } antialiased lg:overflow-hidden`}
       >
         <NextIntlClientProvider messages={messages}>
           <SectionContextProvider>{children}</SectionContextProvider>

@@ -1,6 +1,5 @@
 "use client";
 
-import { Link } from "@/i18n/routing";
 import React from "react";
 import { useLocale, useTranslations } from "next-intl";
 import LocaleSwitcher from "./LocaleSwitcher";

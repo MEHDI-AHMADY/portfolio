@@ -42,7 +42,7 @@ const Hero = () => {
         </div>
 
         <div
-          className={`imageParent relative w-64 h-64 ${
+          className={`imageParent relative hidden md:block w-64 h-64 ${
             locale === "fa" ? "xl:left-96" : "xl:right-96"
           }`}
         >
