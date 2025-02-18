@@ -23,7 +23,8 @@
   "ProjectsSection" : {
     "Projects" : "Projects",
     "Tools" : "Tools",
-    "GithubAddress" : "GithubAddress",
+    "GithubAddress" : "Github",
+    "live" : "live",
     "Dashboard" : {
       "title" : "Dashboard",
       "description" : "A nice Dashboard built with react",
@@ -103,5 +104,11 @@
       "github" : "https://github.com/MEHDI-AHMADY/ticketing",
       "image" : "/assets/images/ticketing.png"
     }
+  },
+  "ContactMeSection" : {
+    "contactMe" : "Contact Me",
+    "email" : "Email",
+    "phone" : "Phone",
+    "text" : "I would be happy to take a part as a Frontend developer in your team and make a user friendly and dynamic sites for our clients."
   }
 }

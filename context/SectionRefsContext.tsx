@@ -9,9 +9,10 @@ import {
 } from "react";
 
 type SectionRefs = {
-  aboutRef: React.RefObject<HTMLElement | null>;
   heroRef: React.RefObject<HTMLElement | null>;
+  aboutRef: React.RefObject<HTMLElement | null>;
   projectsRef: React.RefObject<HTMLElement | null>;
+  contactMeRef: React.RefObject<HTMLElement | null>;
   sections: React.RefObject<HTMLElement | null>[];
 };
 
@@ -23,8 +24,9 @@ export const SectionContextProvider: React.FC<PropsWithChildren> = ({
   const heroRef = useRef<HTMLElement | null>(null);
   const aboutRef = useRef<HTMLElement | null>(null);
   const projectsRef = useRef<HTMLElement | null>(null);
+  const contactMeRef = useRef<HTMLElement | null>(null);
 
-  const sections = [heroRef, aboutRef, projectsRef];
+  const sections = [heroRef, aboutRef, projectsRef, contactMeRef];
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -53,7 +55,7 @@ export const SectionContextProvider: React.FC<PropsWithChildren> = ({
 
   return (
     <SectionsContext.Provider
-      value={{ heroRef, aboutRef, projectsRef, sections }}
+      value={{ heroRef, aboutRef, projectsRef, contactMeRef, sections }}
     >
       {children}
     </SectionsContext.Provider>

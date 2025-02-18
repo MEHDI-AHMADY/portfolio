@@ -76,8 +76,8 @@ const Projects = () => {
   ];
 
   return (
-    <section ref={projectsRef} className="h-screen p-5">
-      <h2 className="text-2xl my-4 inline-block bg-secondary p-1 rounded-sm">
+    <section ref={projectsRef} className="h-screen py-5 px-20">
+      <h2 className="text-xl my-4 inline-block p-1 rounded-sm">
         {t("Projects")}
       </h2>
       <div className="grid grid-cols-3 gap-4">

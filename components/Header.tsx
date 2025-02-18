@@ -37,9 +37,6 @@ const Header = () => {
               {t("projects")}
             </button>
           </li>
-          <li className="nav-item">
-            <Link href="#github">{t("github")}</Link>
-          </li>
         </ul>
       </nav>
       <LocaleSwitcher />

@@ -23,7 +23,8 @@
   "ProjectsSection" : {
     "Projects" : "پروژه ها",
     "Tools" : "ابزارها",
-    "GithubAddress" : "آدرس گیت هاب",
+    "GithubAddress" : "گیت هاب",
+    "live" : "لینک مستقیم",
     "Dashboard" : {
       "title" : "داشبورد",
       "description" : "داشبورد با ری اکت",
@@ -103,5 +104,11 @@
       "github" : "https://github.com/MEHDI-AHMADY/ticketing",
       "image" : "/assets/images/ticketing.png"
     }
+  },
+  "ContactMeSection" : {
+    "contactMe" : "ارتباط با من",
+    "email" : "ایمیل",
+    "phone" : "موبایل",
+    "text" : "خوشحال میشم که در  تیم شما مسؤلیت بخش فرانت رو به عهده داشته باشم و وبسایت هایی کاربرپسند و واکنش پذیر رو برای کلاینت هامون آماده کنیم."
   }
 }
