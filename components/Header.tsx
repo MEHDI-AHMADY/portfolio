@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <header className="p-5 flex items-center justify-between">
-      <nav>
+      <nav className="hidden md:block">
         <ul className={`flex items-center gap-6 ${style}`}>
           <li className="nav-item">
             <button
@@ -34,6 +34,14 @@ const Header = () => {
               onClick={() => scrollToSection(sections[2])}
             >
               {t("projects")}
+            </button>
+          </li>
+          <li className="nav-item">
+            <button
+              className="outline-none"
+              onClick={() => scrollToSection(sections[3])}
+            >
+              {t("contactMe")}
             </button>
           </li>
         </ul>
