@@ -111,7 +111,7 @@ const Projects = () => {
   ];
 
   return (
-    <section ref={projectsRef} className="lg:min-h-screen px-4 lg:px-20">
+    <section ref={projectsRef} className="lg:min-h-screen px-4 mt-12 lg:mt-0 lg:px-20">
       <h2 className="text-2xl mb-4 inline-block p-1 rounded-sm">
         {t("Projects")}
       </h2>
