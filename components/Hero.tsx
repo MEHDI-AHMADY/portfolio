@@ -12,25 +12,24 @@ const Hero = () => {
   const locale = useLocale();
   const { heroRef } = useSections();
 
-  const style = locale === "en" ? "text-white" : "text-primary";
-
   return (
-    <section ref={heroRef} className="shared-bg p-4 text-white lg:min-h-screen">
+    <section ref={heroRef} className="md:shared-bg p-4 text-white lg:min-h-screen">
       <Header />
 
-      <div className="flex items-center justify-between mt-32 px-5">
-        <div className={`${style}`}>
-          <h1 className="text-5xl text-secondary">
+      <div className="flex flex-col md:flex-row items-center justify-between mt-10 px-14 md:mt-32">
+        <div className={`hidden md:block ${locale === "en" ? "text-secondary" : "text-primary"}`}>
+          <h1 className={`text-5xl ${locale === "en" ? "text-secondary" : "text-primary"}`}>
             {t("jobTitle1")} <br />
             {t("jobTitle2")}.
           </h1>
 
-          <div className="flex items-center gap-2 mt-5 ">
-            <p className={`${locale === "fa" ? "text-lg" : "text-2xl"}`}>
-              {t("description")}
-            </p>
-            <ImMagicWand className="text-lg" />
-          </div>
+          <p
+            className={`mt-10 md:max-w-36 ${
+              locale === "fa" ? "text-lg" : "text-2xl"
+            }`}
+          >
+            {t("description")}
+          </p>
 
           <p
             className={`mt-20 max-w-52 ${
@@ -38,15 +37,16 @@ const Hero = () => {
             }`}
           >
             {t("description2")}
-          </p>
+        </p>
         </div>
-
-        <div
-          className={`imageParent relative hidden md:block w-64 h-64 ${
-            locale === "fa" ? "xl:left-96" : "xl:right-96"
-          }`}
-        >
-          <Image src={MyImage} fill={true} alt="myImage" loading="lazy" />
+        <div className={`flex items-center justify-center ${
+              locale === "fa" ? "xl:left-96" : "xl:right-96"
+            }`}>
+          <div
+            className={`mt-4 imageParent w-52 h-52 rounded-full overflow-hidden relative md:w-64 md:h-64`}
+          >
+            <Image src={MyImage} fill={true} alt="myImage" loading="lazy" />
+          </div>
         </div>
       </div>
     </section>
